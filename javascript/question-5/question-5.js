@@ -1,3 +1,6 @@
+
+// 5. Try to optimise function generateUsersDetail to reduce time taken.
+
 // ***DO NOT EDIT THIS PART
 function randomString() {
     let result = '';
@@ -31,6 +34,31 @@ function generateUsersDetail(userIds, userNames, userPhotos) {
             photo: userPhotos?.find(uD => uD.userId === userId)?.photo || '',
         })
     })
+    return result;
+}
+
+function generateUsersDetail(userIds, userNames, userPhotos) {
+    const result = [];
+
+    const nameMap = {};
+    const photoMap = {};
+
+    userNames.forEach(user => {
+        nameMap[user.userId] = user.name;
+    });
+
+    userPhotos.forEach(user => {
+        photoMap[user.userId] = user.photo;
+    });
+
+    userIds.forEach((userId) => {
+        result.push({
+            userId,
+            fullName: nameMap[userId] || '',
+            photo: photoMap[userId] || '',
+        });
+    });
+
     return result;
 }
 

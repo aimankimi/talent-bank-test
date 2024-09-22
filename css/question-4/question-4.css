@@ -1,0 +1,35 @@
+/* Declaring CSS variables in :root */
+:root {
+    --primary-color: #3498db;    /* Blue color as primary */
+    --secondary-color: #2ecc71;  /* Green color as secondary */
+    --main-font-size: 1.5rem;    /* Font size for the text */
+    --padding: 15px;             /* Button padding */
+  }
+  
+  /* Applying variables */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: var(--primary-color); /* Using blue color */
+    font-size: 2rem;
+  }
+  
+  p {
+    color: var(--secondary-color); /* Using green color */
+    font-size: var(--main-font-size);
+  }
+  
+  button {
+    background-color: var(--primary-color); /* Button background */
+    color: white;
+    border: none;
+    padding: var(--padding); /* Using padding variable */
+    cursor: pointer;
+  }
+  
+  /* Button hover effect using variables */
+  button:hover {
+    background-color: var(--secondary-color);
+  }

@@ -1,0 +1,17 @@
+.styled-header::before {
+    content: 'Important: '; 
+    font-weight: bold;       
+    color: red;              
+}
+
+.styled-paragraph::after {
+    content: ' Thank you for visiting.';  
+    font-style: italic;                  
+    color: green;                        
+}
+
+.styled-paragraph::first-letter {
+    font-size: 2rem;     
+    font-weight: bold;    
+    color: blue;         
+}

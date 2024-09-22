@@ -1,0 +1,15 @@
+.box {
+    width: 300px;
+    height: 150px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 150px;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    transition: background-color 0.5s ease-in-out, transform 0.4s ease;
+  }
+  
+  .box:hover {
+    background-color: coral; 
+    transform: scale(1.1); 
+  }
